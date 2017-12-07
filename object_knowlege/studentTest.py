@@ -18,3 +18,8 @@ lisa = Student('Lisa Simpson', 89)
 bart.print_score()
 
 lisa.print_score()
+
+print(bart.get_grade())
+
+print(lisa.get_grade())
+

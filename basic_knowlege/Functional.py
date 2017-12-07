@@ -194,9 +194,9 @@ print(f.__name__)
 def metric(fn):
     @functools.wraps(fn)
     def wrapper(*args, **kwargs):
-        time_start =
+        time_start = datetime.datetime.now()
         r = fn(*args, **kwargs)
-        print('{} executed in {} ms'.format(fn.__name__, (time.microsecond - time_start) * 1000))
+        print('{} executed in {} ms'.format(fn.__name__, datetime.datetime.now() - time_start))
         return r
 
     return wrapper
@@ -208,3 +208,12 @@ def show():
 
 
 show()
+
+# 偏函数
+
+# functools.partial就是帮助我们创建一个偏函数的，
+# 不需要我们自己定义int2()，可以直接使用下面的代码创建一个新的函数int2：
+
+int2 = functools.partial(int, base=2)
+
+print(int2('1000000'))

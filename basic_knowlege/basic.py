@@ -132,7 +132,7 @@ n2 = 1000
 print(hex(n1))
 print(hex(n2))
 
-from abs_teset import my_abs
+from basic_knowlege.abs_teset import my_abs
 
 print(my_abs(-190))
 
@@ -294,7 +294,7 @@ trim("   ")
 for key, value in d.items():
     print('key:', key, 'value:', value)
 
-from collections import Iterable, Iterator
+from collections import Iterable
 
 print(isinstance('abc', Iterable))  # 判断是否可以做迭代
 print(isinstance([1, 2, 3], Iterable))

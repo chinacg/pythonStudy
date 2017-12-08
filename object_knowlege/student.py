@@ -12,9 +12,10 @@
 
 
 class Student(object):
-    def __init__(self, name, score):
-        self.__name = name
+    def __init__(self, name, score, gender):
+        self.__name = name  # 私有变量外界不能直接访问
         self.__score = score
+        self.__gender = gender
 
     def print_score(self):
         print('%s: %s' % (self.__name, self.__score))
@@ -41,3 +42,9 @@ class Student(object):
             self.__score = score
         else:
             raise ValueError('bad score')
+
+    def get_gender(self):
+        return self.__gender
+
+    def set_gender(self, gender):
+        self.__gender = gender

@@ -11,9 +11,9 @@
 """
 from object_knowlege.student import Student
 
-bart = Student('Bart Simpson', 78)
+bart = Student('Bart Simpson', 78, 1)
 
-lisa = Student('Lisa Simpson', 89)
+lisa = Student('Lisa Simpson', 89, 2)
 
 bart.print_score()
 
@@ -22,4 +22,5 @@ lisa.print_score()
 print(bart.get_grade())
 
 print(lisa.get_grade())
+
 

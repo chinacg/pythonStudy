@@ -12,6 +12,7 @@
 
 
 class Student(object):
+
     def __init__(self, name, score, gender):
         self.__name = name  # 私有变量外界不能直接访问
         self.__score = score

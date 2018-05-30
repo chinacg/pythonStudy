@@ -196,9 +196,10 @@ person('Jack', 24, **extra)
 
 
 # 命名关键字参数
-
+# 命名关键字参数需要一个特殊分隔符*，*后面的参数被视为命名关键字参数
 def person_v2(name, age, *, city, job):
     print(name, age, city, job)
+
 
 
 person('Jack', 33, city='Beijing', job='Enginner')
@@ -300,7 +301,7 @@ print(isinstance('abc', Iterable))  # 判断是否可以做迭代
 print(isinstance([1, 2, 3], Iterable))
 print(isinstance(1, Iterable))
 
-for k, v in enumerate(['A', 'B', 'C']):
+for k, v in enumerate(['A', 'B', 'C']): # 数组转迭代器 key是index
     print('key:', k, 'value:', v)
 
 
